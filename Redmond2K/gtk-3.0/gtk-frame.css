@@ -4,8 +4,6 @@
 /* General frames */
 
 
-
-
 frame > border {
   padding: 1px;
   border-color: @borders;
@@ -22,11 +20,7 @@ frame > border {
 statusbar frame > border {
     padding: 0;
     box-shadow: none;
-    border: none;
-    /*
-    border: 1px solid shade(@bg_color, 0.7);
-    border-bottom: 1px solid @light_shadow;
-    border-right: 1px solid @light_shadow;*/ }
+    border: none; }
 
 
 /* Styled frames */
@@ -37,8 +31,7 @@ frame.border-inset > border {
    border-style: solid;
    border-color: shade(@theme_bg_color, 0.7);
    box-shadow: 1px 1px @borders inset;
-   border-radius: 0;
-}
+   border-radius: 0; }
 
 frame.border-outset > border {
    border-width: 1px;
@@ -47,57 +40,51 @@ frame.border-outset > border {
    border-bottom: 1px solid @borders;
    border-right: 1px solid @borders;
    box-shadow: -1px -1px shade(@bg_color, 0.7) inset;
-   border-radius: 0;
-}
+   border-radius: 0; }
 
 frame.border-groove > border {
    border-width: 1px;
    border-style: solid;
    border-color: shade(@theme_bg_color, 0.7);
-   border-radius: 0;
-}
+   border-radius: 0; }
 
 frame.border-ridge > border {
    border-width: 1px;
    border-style: solid;
    border-color: shade(@theme_bg_color, 0.7);
-   border-radius: 0;
-}
+   border-radius: 0; }
 
 
 /* Hack to make all scrolled window widgets bg color match theme base bg color */
 
 
 scrolledwindow.frame {
-  background-color: @theme_base_color;
-}
+  background-color: @theme_base_color; }
 
 
-/* Hack for scrolled window to always have inset borders:
+/* Hack for scrolled windows to always have borders:
    Specify border for scrolled window widget directly since the scrolled window does not always
    have a frame. This forces most scrolled windows have a border. Do not reference the scrolled
    window widget directly, use references through parent widgets otherwise Libre-Office will also
    put a border around the menu bar */
 
 
-
 paned > scrolledwindow, box > scrolledwindow, overlay > scrolledwindow, notebook > * > scrolledwindow,
 paned > * > notebook > stack > * > scrolledwindow, viewport > grid > scrolledwindow {
-  border-color: @borders;
-  border: 1px solid shade(@theme_bg_color,0.7);
-  border-bottom: 1px solid #fff;
-  border-right: 1px solid #fff;
-  border-radius: 0px;
-  box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset;
-}
+   border-color: @borders;
+   border: 1px solid shade(@theme_bg_color,0.7);
+   border-bottom: 1px solid #fff;
+   border-right: 1px solid #fff;
+   border-radius: 0px;
+   box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset; }
 
 
-/* Force sidebars such as places sidebar have an inset border */
+/* Force sidebars such as places sidebar to have a border */
 
 
 .sidebar list {
-  border: 1px solid shade(@theme_bg_color,0.7);
-  border-bottom: 1px solid #fff;
-  border-right: 1px solid #fff;
-  border-radius: 0px;
-  box-shadow: 1px 1px shade(@button_bg_color, 0.3) inset, -1px -1px @theme_bg_color inset; }
+   border: 1px solid shade(@theme_bg_color,0.7);
+   border-bottom: 1px solid #fff;
+   border-right: 1px solid #fff;
+   border-radius: 0px;
+   box-shadow: 1px 1px shade(@button_bg_color, 0.3) inset, -1px -1px @theme_bg_color inset; }

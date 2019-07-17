@@ -8,8 +8,7 @@
     border-right: 1px solid @borders;
     box-shadow: inset 1px 1px @light_shadow, inset -1px -1px shade(@bg_color, 0.7);
     background-color: @theme_bg_color;
-    color: @fg_color;
-}
+    color: @fg_color; }
 
 
 /* Adjust padding so selected itmes fit inside menu borders */
@@ -20,8 +19,7 @@ menu menuitem {
     padding-left: 2px;
     padding-right: 2px;
     padding-top: 2px;
-    padding-bottom: 2px;
-}
+    padding-bottom: 2px; }
 
 
 /* Menu item states */
@@ -30,13 +28,11 @@ menu menuitem {
 menuitem:active,
 menuitem:hover {
    background-color: @theme_selected_bg_color;
-   color: @theme_selected_fg_color;
-}
+   color: @theme_selected_fg_color; }
 
 menuitem:disabled {
    color: @disabled_fg_color;
-   text-shadow: 1px 1px @light_shadow;
-}
+   text-shadow: 1px 1px @light_shadow; }
 
 
 toolbar menubar {
@@ -77,8 +73,7 @@ menubar > menuitem:hover, .menubar > menuitem:hover {
    border-color: @menubar_bg_color;
    background-color: @button_bg_color;
    background-image: none;
-   box-shadow: inset 1px 1px shade(@button_bg_color, 0.65), inset -1px -1px @light_shadow; 
-}
+   box-shadow: inset 1px 1px shade(@button_bg_color, 0.65), inset -1px -1px @light_shadow; }
 
 
 /* Menubar item states */
@@ -107,18 +102,15 @@ popover {
 
 popover :focus {
    outline: none;
-   border: none;
-}
+   border: none; }
 
 popover :hover {
    background-color: @theme_selected_bg_color;
-   color: @theme_selected_fg_color;
-}
+   color: @theme_selected_fg_color; }
 
 popover :disabled {
    color: @disabled_fg_color;
-   text-shadow: 1px 1px @light_shadow;
-}
+   text-shadow: 1px 1px @light_shadow; }
 
 popover  label {
    padding: 3px; }
