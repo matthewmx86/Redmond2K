@@ -1,2 +1,2 @@
 # Redmond2K
-Win2K theme for GTK3 and GTK2
+A Win2K theme for GTK3 and GTK2 developed for XFCE4
