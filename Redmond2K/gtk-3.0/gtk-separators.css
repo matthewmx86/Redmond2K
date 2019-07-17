@@ -5,9 +5,7 @@ separator, separator:backdrop {
 
 /* Make window separators transparent this avoids 
    apps displaying separators under toolbar boarders 
-   and edges:
-   box-shadow: 1px 1px @light_shadow;
-   background-color: shade(@bg_color, 0.7); */
+   and edges: */
 
   background-color: transparent;
  }
@@ -18,11 +16,13 @@ paned > separator {
   min-width: 3px;
   min-height: 1px;
   background-color: transparent; }
-  paned > separator:backdrop {
+
+paned > separator:backdrop {
   min-width: 3px;
   min-height: 1px;
   background-color: transparent; }
-  paned > separator:selected {
+  
+paned > separator:selected {
   min-width: 3px;
   min-height: 1px;
   background-color: transparent; }
