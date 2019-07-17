@@ -14,14 +14,13 @@ scrollbar trough {
    border-radius: 0; }
 
 
-/* Hide backdrops */
+/* Hide backdrops, maintain button size */
 
 
 scrollbar button, scrollbar button:backdrop, scrollbar button:active, scrollbar button:active:backdrop, 
 scrollbar button:disabled, scrollbar button:disabled:backdrop, scrollbar .button, 
 scrollbar .button:backdrop, scrollbar .button:active, scrollbar .button:active:backdrop, 
 scrollbar .button:disabled, scrollbar .button:disabled:backdrop {
-   border: none;
    margin-top: 0px;
    margin-bottom: 0px;
    padding: 0;
