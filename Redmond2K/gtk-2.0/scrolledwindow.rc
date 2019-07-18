@@ -17,7 +17,7 @@ GtkScrolledWindow::scrollbars-within-bevel = 1
 		image
 		{
 			function = SHADOW
-			file = "scrolledwindow/entry.png"
+			file = "entry/entry.png"
 			border = {2, 2, 2, 2}
 			stretch	= TRUE
 			shadow = IN
