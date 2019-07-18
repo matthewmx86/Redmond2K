@@ -63,13 +63,30 @@ convert -page +0+0 scrollbar_button_active.png -page +0+0 arrow_down.png -layers
 convert -page +0+0 scrollbar_button_active.png -page +0+0 arrow_left.png -layers flatten scroll_left_button_active.png
 rm scrollbar_button.png
 
+#compile tabs
+convert -flip tab.png tab_left.png
+convert -flip tab_checked.png tab_left_checked.png
+convert -flip tab_gap.png tab_gap_left.png
+convert -rotate "90" tab_left.png tab_left.png
+convert -rotate "90" tab_left_checked.png tab_left_checked.png
+convert -rotate "90" tab_gap_left.png tab_gap_left.png
+cp tab_gap_left.png tab_gap_right.png
+convert -flip tab_bottom.png tab_right.png
+convert -flip tab_bottom_checked.png tab_right_checked.png
+convert -rotate "90" tab_right.png tab_right.png
+convert -rotate "90" tab_right_checked.png tab_right_checked.png
+mv tab.png tab-top.png
+mv tab_checked.png tab_top_checked.png
+cp tab_gap.png tab_gap_top.png
+mv tab_gap.png tab_gap_bottom.png
+mv tab_gap.png tab_gap_top.png
 cd ..
-
 
 else
   if [ "$1" = "-c" ]; then
     for i in $(ls -d */ | grep -o .*[Aa-Zz]); do
       rm "$i/$i.png"
+      rm -rf assets/*
     done
   else
 cd $1
@@ -89,7 +106,7 @@ convert -background none -page +0+0 background.png -page +0+0 highlight.png \
 -page +0+0 shadow.png -page 0+0 border.png -page +0+0 base.png -page +0+0 check.png \
 -page +0+0 aa.png -layers flatten $1.png
 #remove work files
-#rm shadow.png border.png highlight.png background.png base.png check.png aa.png
+rm shadow.png border.png highlight.png background.png base.png check.png aa.png
 #return to directory
 cd ..
 
