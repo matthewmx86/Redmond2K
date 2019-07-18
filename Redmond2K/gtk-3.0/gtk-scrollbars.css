@@ -6,7 +6,7 @@
 scrollbar {
    border: 0px solid @borders;
    background-color: @bg_color;
-   background-image: url("assets/scrollbg.png");
+   background-image: url("assets/scrollbar_trough.png");
 }
 
 scrollbar trough {
@@ -62,11 +62,11 @@ scrollbar.horizontal .button {
 
 scrollbar.horizontal button.down, 
 scrollbar.horizontal .button.bottom {
-   background-image: url("assets/arrow-right.png"); }
+   background-image: url("assets/arrow_right.png"); }
     
 scrollbar.horizontal button.up,
 scrollbar.horizontal .button.top {
-   background-image: url("assets/arrow-left.png"); }
+   background-image: url("assets/arrow_left.png"); }
       
 scrollbar.horizontal button.down:active,
 scrollbar.horizontal .button.down:active {
@@ -119,12 +119,12 @@ scrollbar.vertical .button.top:active {
 
 scrollbar.vertical button.down,
 scrollbar.vertical .button.bottom {
-    background-image: url("assets/arrow-down.png"); 
+    background-image: url("assets/arrow_down.png"); 
 }
     
 scrollbar.vertical button.up,
 scrollbar.vertical .button.top {
-    background-image: url("assets/arrow-up.png"); }
+    background-image: url("assets/arrow_up.png"); }
   
 
 /* Mystery */

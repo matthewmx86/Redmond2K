@@ -76,46 +76,46 @@ notebook > header {
 
 notebook > header.top > tabs > tab {
    border-width: 5px 5px 2px 5px;
-   border-image: url("assets/tab-top.png");
+   border-image: url("assets/tab_top_checked.png");
    border-image-slice: 5 5 2 5; }
         
 notebook > header.top > tabs > tab:checked {
    margin-bottom: -1px;
-   border-image: url("assets/tab-top-active.png");
+   border-image: url("assets/tab_top.png");
    border-image-slice: 5 5 2 5; }
 
 /* Bottom tabs */
 
 notebook > header.bottom > tabs > tab {
    border-width: 2px 5px 5px 5px;
-   border-image: url("assets/tab-bottom.png");
+   border-image: url("assets/tab_bottom_checked.png");
    border-image-slice: 2 5 5 5; }
         
 notebook > header.bottom > tabs > tab:checked {
    margin-top: -2px;
-   border-image: url("assets/tab-bottom-active.png");
+   border-image: url("assets/tab_bottom.png");
    border-image-slice: 2 5 5 5; }
 
 /* Right side tabs */
 
 notebook > header.right > tabs > tab {
    border-width: 4px 8px 6px 0px;
-   border-image: url("assets/tab-right.png");
+   border-image: url("assets/tab_right_checked.png");
    border-image-slice: 4 8 6 0; }
 
 notebook > header.right > tabs > tab:checked {
    margin-left: -2px;
-   border-image: url("assets/tab-right-active.png");
+   border-image: url("assets/tab_right.png");
    border-image-slice: 4 8 6 0; }
 
 /* Left side tabs */
 
 notebook > header.left > tabs > tab {
    border-width: 4px 0 6px 8px;
-   border-image: url("assets/tab-left.png");
+   border-image: url("assets/tab_left_checked.png");
    border-image-slice: 4 0 6 8; }
         
 notebook > header.left > tabs > tab:checked {
    margin-right: -1px;
-   border-image: url("assets/tab-left-active.png");
+   border-image: url("assets/tab_left.png");
    border-image-slice: 4 0 6 8; }

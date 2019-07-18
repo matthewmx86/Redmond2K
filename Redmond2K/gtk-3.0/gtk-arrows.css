@@ -30,13 +30,13 @@ expander arrow:checked {
 
 
 combobox arrow {
-   background-image: url("assets/combo.png");
+   background-image: url("assets/arrow_down.png");
    background-position: center;
    min-height: 14px;
    min-width: 14px; }
 
 combobox arrow:disabled {
-   background-image: url("assets/combo.png");
+   background-image: url("assets/arrow_down.png");
    background-position: center;
    min-height: 14px;
    min-width: 14px; }
@@ -46,14 +46,14 @@ combobox arrow:disabled {
 
 
 spinbutton.horizontal > button.down {
-   background-image: url("assets/minimize.svg");
+   background-image: url("assets/arrow_down.png");
    background-position: center;
    min-height: 14px;
    min-width: 14px;
 }
 
 spinbutton.horizontal > button.up {
-   background-image: url("assets/maximize.svg");
+   background-image: url("assets/arrow_up.png");
    background-position: center;
    min-height: 14px;
    min-width: 14px;
@@ -77,5 +77,5 @@ menu > arrow.bottom, .menu > arrow.bottom {
 
 menu menuitem arrow:dir(ltr), .menu menuitem arrow:dir(ltr) {
    margin-left: 10px;
-   -gtk-icon-source: url("assets/menu-arrow-right.png"); }
+   -gtk-icon-source: url("assets/arrow_right.png"); }
 
