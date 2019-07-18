@@ -134,4 +134,5 @@ cp scrollbar_trough.png $gtk3
 cp radio*.png $gtk3
 cp c_box*.png $gtk3
 cp arrow*.png $gtk3
+cp switch*.png $gtk3
 cd ..
