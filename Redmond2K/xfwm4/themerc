@@ -1,7 +1,8 @@
 active_color_1=#6f99be
 inactive_color_1=#7d7a73
 active_border_color=#000000
-inactive_text_color=#c0c0c0
+active_text_color=#fff
+inactive_text_color=#d4d0c8
 button_layout=O|HMC
 button_offset=1
 button_spacing=0

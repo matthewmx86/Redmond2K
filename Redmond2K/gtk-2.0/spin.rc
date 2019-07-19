@@ -11,8 +11,8 @@ style "spinbutton"
 		{
       		function = BOX
       		detail = "spinbutton"
-      		file = "button/button-spin.png"
-      		border = {2, 2, 2, 2}
+      		file = "assets/spin.png"
+      		border = {4, 4, 4, 4}
       		stretch	= TRUE
     	}
     	
@@ -28,8 +28,8 @@ style "spinbutton"
 			function = BOX
 			state = NORMAL
 			detail = "spinbutton_up"
-			overlay_file = "arrow/arrow-up.png"
-			overlay_stretch	= FALSE
+			overlay_file = "assets/arrow_up.png"
+			overlay_stretch	= TRUE
     	}
     
 ## Prelight
@@ -38,8 +38,8 @@ style "spinbutton"
 			function = BOX
 			state = PRELIGHT
       		detail = "spinbutton_up"
-			overlay_file = "arrow/arrow-up.png"
-			overlay_stretch	= FALSE
+			overlay_file = "assets/arrow_up.png"
+			overlay_stretch	= TRUE
 		}
 
 ## Insensitive    
@@ -48,8 +48,8 @@ style "spinbutton"
 			function = BOX
 			state = INSENSITIVE
 			detail = "spinbutton_up"
-			overlay_file = "arrow/arrow-up-disable.png"
-			overlay_stretch	= FALSE
+			overlay_file = "assets/arrow_up_ins.png"
+			overlay_stretch	= TRUE
 		}
 
 ## Active
@@ -58,8 +58,8 @@ style "spinbutton"
 			function = BOX
 			state = ACTIVE
 			detail = "spinbutton_up"
-			overlay_file = "arrow/arrow-up.png"
-			overlay_stretch	= FALSE
+			overlay_file = "assets/arrow_up.png"
+			overlay_stretch	= TRUE
 		}    
 
 ### Arrow DOWN ###
@@ -70,8 +70,8 @@ style "spinbutton"
 			function = BOX
 			state = NORMAL
 			detail = "spinbutton_down"
-			overlay_file = "arrow/arrow-down.png"
-			overlay_stretch	= FALSE
+			overlay_file = "assets/arrow_down.png"
+			overlay_stretch	= TRUE
 		}
 
 ## Prelight
@@ -80,8 +80,8 @@ style "spinbutton"
 			function = BOX
       		state = PRELIGHT
       		detail = "spinbutton_down"
-      		overlay_file = "arrow/arrow-down.png"
-      		overlay_stretch	= FALSE
+      		overlay_file = "assets/arrow_down.png"
+      		overlay_stretch	= TRUE
     	}
 
 ## Insensitive    
@@ -90,8 +90,8 @@ style "spinbutton"
       		function = BOX
       		state = INSENSITIVE
       		detail = "spinbutton_down"
-      		overlay_file = "arrow/arrow-down-disable.png"
-      		overlay_stretch	= FALSE
+      		overlay_file = "assets/arrow_down_ins.png"
+      		overlay_stretch	= TRUE
     	}
 
 ## Active    
@@ -100,8 +100,8 @@ style "spinbutton"
       		function = BOX
       		state = ACTIVE
       		detail = "spinbutton_down"
-      		overlay_file = "arrow/arrow-down.png"
-      		overlay_stretch	= FALSE
+      		overlay_file = "assets/arrow_down.png"
+      		overlay_stretch	= TRUE
     	}
   	}
 }

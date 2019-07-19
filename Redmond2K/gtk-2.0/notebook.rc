@@ -13,7 +13,7 @@ style "notebook"
 		image 
 		{
 			function = BOX
-			file = "notebook/notebook.png"
+			file = "assets/notebook.png"
 			border = {3, 3, 3, 3}
 			stretch	= TRUE
       	}
@@ -25,7 +25,7 @@ style "notebook"
 		{
 			function = EXTENSION
 			state = ACTIVE
-			file = "notebook/tab-top.png"
+			file = "assets/tab_top.png"
 			border = {8, 8, 8, 8}
 			stretch	= TRUE
 			gap_side = BOTTOM
@@ -35,7 +35,7 @@ style "notebook"
 		image 
 		{
 			function = EXTENSION
-			file = "notebook/tab-top-active.png"
+			file = "assets/tab_top_checked.png"
 			border = {8, 8, 8, 8}
 			stretch = TRUE
 			gap_side = BOTTOM
@@ -49,7 +49,7 @@ style "notebook"
 		{
 			function = EXTENSION
 			state = ACTIVE
-            file = "notebook/tab-bottom.png"
+            		file = "assets/tab_bottom.png"
 			border = {8, 8, 8, 8}
 			stretch	= TRUE
 			gap_side = TOP
@@ -59,7 +59,7 @@ style "notebook"
 		image 
 		{
 			function = EXTENSION
-			file = "notebook/tab-bottom-active.png"
+			file = "assets/tab_bottom_checked.png"
 			border = {8, 8, 8, 8}
 			stretch	= TRUE
 			gap_side = TOP
@@ -72,7 +72,7 @@ style "notebook"
 		{
 			function = EXTENSION
 			state = ACTIVE
-			file = "notebook/tab-left.png"
+			file = "assets/tab_left.png"
 			border = {8,2,8,8}
 			stretch	= TRUE
 			gap_side = RIGHT
@@ -82,7 +82,7 @@ style "notebook"
 		image 
 		{
 			function = EXTENSION
-			file = "notebook/tab-left-active.png"
+			file = "assets/tab_left_checked.png"
 			border = {8, 8, 8, 8}
 			stretch = TRUE
 			gap_side = RIGHT
@@ -95,7 +95,7 @@ style "notebook"
 		{
 			function = EXTENSION
 			state = ACTIVE
-			file = "notebook/tab-right.png"
+			file = "assets/tab_right.png"
 			border = {8, 8, 8, 8}
 			stretch	= TRUE
 			gap_side = LEFT
@@ -105,7 +105,7 @@ style "notebook"
 		image 
 		{
 			function = EXTENSION
-			file = "notebook/tab-right-active.png"
+			file = "assets/tab_right_checked.png"
 			border = {8, 8, 8, 8}
 			stretch	= TRUE
 			gap_side = LEFT
@@ -115,10 +115,10 @@ style "notebook"
 		image 
 		{
 			function = BOX_GAP
-			file = "notebook/notebook.png"
+			file = "assets/notebook.png"
 			border = {8, 8, 8, 8}
 			stretch	= TRUE
-			gap_file = "notebook/top-gap.png"
+			gap_file = "assets/tab_gap_top.png"
                         gap_border = {1, 2, 0, 0}
 			gap_side = TOP			
 
@@ -128,10 +128,10 @@ style "notebook"
 		image 
 		{
 			function = BOX_GAP
-			file = "notebook/notebook.png"
+			file = "assets/notebook.png"
 			border = {8, 8, 8, 8}
 			stretch	= TRUE
-			gap_file = "notebook/top-gap.png"
+			gap_file = "assets/tab_gap_bottom.png"
 			gap_border = {1, 2, 0, 0}
 			gap_side = BOTTOM
       	}
@@ -140,10 +140,10 @@ style "notebook"
 		image 
 		{
 			function = BOX_GAP
-			file = "notebook/notebook.png"
+			file = "assets/notebook.png"
 			border = {3, 3, 3, 3}
 			stretch	= TRUE
-			gap_file = "notebook/left-gap.png"
+			gap_file = "assets/tab_gap_left.png"
 			gap_border = {0, 0, 3, 2}
 			gap_side = LEFT
       	}
@@ -152,10 +152,10 @@ style "notebook"
 		image 
 		{
 			function = BOX_GAP
-			file = "notebook/notebook.png" 
+			file = "assets/notebook.png" 
 			border = {8, 8, 8, 8}
 			stretch	= TRUE
-			gap_file = "notebook/left-gap.png"
+			gap_file = "assets/tab_gap_right.png"
 			gap_border = {0, 0, 8, 8}
 			gap_side = RIGHT
 		}
@@ -164,7 +164,7 @@ style "notebook"
 		image 
 		{
 			function = FOCUS
-                        file = "null.png"
+                        file = "assets/null.png"
 			border = {0, 0, 0, 0}
 			stretch = TRUE
 		}

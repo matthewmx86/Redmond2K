@@ -10,7 +10,7 @@ style "panel"
 	fg[ACTIVE] = "#000000" #TEXT ON ACTIVE PANEL BUTTON
 	fg[SELECTED] = "#000000"
 	fg[INSENSITIVE] = "#000000"
-	bg_pixmap[NORMAL] = "panel/panel-bg2.png"
+	bg_pixmap[NORMAL] = "assets/panel.png"
 	xthickness = 4
 	ythickness = 4
 	GtkWidget::focus_padding = 2
@@ -22,7 +22,7 @@ style "panel"
 			function = BOX
 			recolorable = TRUE
 			state = NORMAL
-			file = "panel/panel-bg.png"
+			file = "assets/panel_button.png"
 			border = { 5, 5, 5, 5 }
 			stretch = TRUE
 		}
@@ -33,7 +33,7 @@ style "panel"
 			shadow = OUT
 			recolorable = TRUE
 			state = PRELIGHT
-			file = "panel/panel-bg.png"
+			file = "assets/panel_button.png"
 			border = { 5, 5, 5, 5 }
 			stretch = TRUE
 		}
@@ -43,7 +43,7 @@ style "panel"
 			function = BOX
 			recolorable = TRUE
 			state = ACTIVE
-			file = "panel/panel-button-active.png"
+			file = "assets/panel_button_checked.png"
 			border = { 5, 5, 5, 5 }
 			stretch = TRUE
 		}
@@ -53,7 +53,7 @@ style "panel"
 			function = BOX
 			recolorable = TRUE
 			state = INSENSITIVE
-			file = "panel/panel-bg.png"
+			file = "assets/panel_button.png"
 			border = { 5, 5, 5, 5 }
 			stretch = TRUE
 		}
@@ -63,7 +63,7 @@ style "panel"
 			function = BOX
 			recolorable = TRUE
 			state = SELECTED
-			file = "panel/panel-button-active.png"
+			file = "assets/panel_button_checked.png"
 			border = { 5, 5, 5, 5 }
 			stretch = TRUE
 		}
@@ -79,7 +79,7 @@ style "panelbar"
 		image
 		{
 			function = HANDLE
-			overlay_file = "toolbar/handlebox-h.png"
+			overlay_file = "assets/handle_h.png"
 			overlay_stretch = FALSE
 			orientation = HORIZONTAL
 		}
@@ -87,7 +87,7 @@ style "panelbar"
 		image
 		{
 			function = HANDLE
-			overlay_file = "toolbar/handlebox-v.png"
+			overlay_file = "assets/handle_v.png"
 			overlay_stretch = FALSE
 			orientation = VERTICAL
 		}
@@ -115,7 +115,7 @@ style "panelbuttons"
 			function = BOX
 			recolorable = TRUE
 			state = NORMAL
-			file = "panel/panel-bg.png"
+			file = "assets/panel_button.png"
 			border = { 5, 5, 5, 5 }
 			stretch = TRUE
 		}
@@ -126,7 +126,7 @@ style "panelbuttons"
 			shadow = OUT
 			recolorable = TRUE
 			state = PRELIGHT
-			file = "panel/panel-bg.png"
+			file = "assets/panel_button.png"
 			border = { 5, 5, 5, 5 }
 			stretch = TRUE
 		}
@@ -136,7 +136,7 @@ style "panelbuttons"
 			function = BOX
 			recolorable = TRUE
 			state = ACTIVE
-			file = "panel/panel-button-active.png"
+			file = "assets/panel_button_checked.png"
 			border = { 5, 5, 5, 5 }
 			stretch = TRUE
 		}
@@ -146,7 +146,7 @@ style "panelbuttons"
 			function = BOX
 			recolorable = TRUE
 			state = INSENSITIVE
-			file = "panel/panel-bg.png"
+			file = "assets/panel_button.png"
 			border = { 5, 5, 5, 5 }
 			stretch = TRUE
 		}
@@ -156,7 +156,7 @@ style "panelbuttons"
 			function = BOX
 			recolorable = TRUE
 			state = SELECTED
-			file = "panel/panel-button-active.png"
+			file = "assets/panel_button_checked.png"
 			border = { 5, 5, 5, 5 }
 			stretch = TRUE
 		}
@@ -166,7 +166,7 @@ style "panelbuttons"
 			function = BOX
 			recolorable = TRUE
 			state = PRELIGHT
-			file = "panel/panel-button-active.png"
+			file = "assets/panel_button_checked.png"
 			border = { 5, 5, 5, 5 }
 			stretch = TRUE
 		}
@@ -197,7 +197,7 @@ style "whiskerbutton"
 		{
 			function = BOX
 			detail = "buttondefault"
-			file = "null.png"
+			file = "assets/null.png"
 			stretch = TRUE
 		}
 
@@ -206,7 +206,7 @@ style "whiskerbutton"
 			function = BOX
 			recolorable = TRUE
 			state = NORMAL
-			file = "null.png"
+			file = "assets/null.png"
 			border = { 0, 0, 0, 0 }
 			stretch = TRUE
 		}
@@ -217,7 +217,7 @@ style "whiskerbutton"
 			shadow = OUT
 			recolorable = TRUE
 			state = PRELIGHT
-			file = "null.png"
+			file = "assets/null.png"
 			border = { 0, 0, 0, 0 }
 			stretch = TRUE
 		}
@@ -228,7 +228,7 @@ style "whiskerbutton"
 			recolorable = TRUE
 			shadow = IN
 			state = PRELIGHT
-			file = "null.png"
+			file = "assets/null.png"
 			border = { 0, 0, 0, 0 }
 			stretch = TRUE
 		}
@@ -238,7 +238,7 @@ style "whiskerbutton"
 			function = BOX
 			recolorable = TRUE
 			state = ACTIVE
-			file = "null.png"
+			file = "assets/null.png"
 			border = { 0, 0, 0, 0 }
 			stretch = TRUE
 		}
@@ -248,7 +248,7 @@ style "whiskerbutton"
 			function = BOX
 			recolorable = TRUE
 			state = INSENSITIVE
-			file = "null.png"
+			file = "assets/null.png"
 			border = { 0, 0, 0, 0 }
 			stretch = TRUE
 		}
@@ -258,7 +258,7 @@ style "whiskerbutton"
 			function = BOX
 			recolorable = TRUE
 			state = SELECTED
-			file = "null.png"
+			file = "assets/null.png"
 			border = { 0, 0, 0, 0 }
 			stretch = TRUE
 		}

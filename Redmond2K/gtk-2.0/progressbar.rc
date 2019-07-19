@@ -15,7 +15,7 @@ style "progressbar"
 		{
 			function = BOX
 			detail = "trough"
-			file = "progressbar/trough.png"
+			file = "assets/entry.png"
 			border = {3, 3, 3, 3}
 			stretch	= TRUE
 			orientation	= HORIZONTAL
@@ -25,7 +25,7 @@ style "progressbar"
 		{
 			function = BOX
 			detail = "trough"
-			file = "progressbar/trough.png"
+			file = "assets/entry.png"
 			border = {3, 3, 3, 3}
 			stretch = TRUE
 			orientation	= VERTICAL
@@ -35,7 +35,7 @@ style "progressbar"
 		{
 			function = SHADOW
 			shadow = IN
-			file = "progressbar/trough-tree.png"
+			file = "assets/trough_tree.png"
 			border = {2, 2, 2, 2}
 			stretch	= TRUE
 		}
@@ -45,7 +45,7 @@ style "progressbar"
 		{
 			function = BOX
 			detail = "bar"
-			file = "progressbar/progressbar-horiz.png"
+			file = "assets/progressbar_horiz.png"
 			border = {2, 2, 2, 2}
 			stretch	= TRUE
 			orientation	= HORIZONTAL
@@ -55,7 +55,7 @@ style "progressbar"
 		{
 			function = BOX
 			detail = "bar"
-			file = "progressbar/progressbar-vert.png"
+			file = "assets/progressbar_vert.png"
 			border = {4, 4, 4, 4}
 			stretch = TRUE
 			orientation	= VERTICAL
@@ -66,7 +66,7 @@ style "progressbar"
 			function = BOX
 			state = SELECTED
 			border = {2, 2, 2, 2}
-			file = "progressbar/progressbar-horiz.png"
+			file = "assets/progressbar_horiz.png"
 			stretch	= TRUE
 		}
 	}

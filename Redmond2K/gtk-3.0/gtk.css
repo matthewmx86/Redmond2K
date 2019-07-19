@@ -1,4 +1,23 @@
 /* base colors */
+@define-color bg_color #d4d0c8;
+@define-color fg_color #000;
+@define-color base_color #fff;
+@define-color text_color #000;
+@define-color selected_bg_color #0a246a;
+@define-color selected_fg_color #fff;
+@define-color light_shadow #FFFFFF;
+@define-color button_bg_color @bg_color;
+@define-color button_fg_color @fg_color;
+@define-color toolbar_bg_color @button_bg_color;
+@define-color toolbar_fg_color @fg_color;
+@define-color menubar_bg_color @bg_color;
+@define-color menubar_fg_color @fg_color;
+@define-color notebook_bg_color @bg_color;
+@define-color disabled_fg_color #A9A6A0;
+/* begin */
+
+
+/* Import widgets */
 @import url("gtk-general.css");
 @import url("gtk-buttons.css");
 @import url("gtk-scrollbars.css");
@@ -17,23 +36,8 @@
 @import url("gtk-hacks.css");
 @import url("whisker-menu.css");
 
-@define-color bg_color #d4d0c8;
-@define-color fg_color #000000;
-@define-color base_color #ffffff;
-@define-color text_color #000000;
-@define-color selected_bg_color #0a246a;
-@define-color selected_fg_color #ffffff;
-@define-color button_bg_color @bg_color;
-@define-color button_fg_color @fg_color;
-@define-color toolbar_bg_color @bg_color;
-@define-color toolbar_fg_color @fg_color;
-@define-color menubar_bg_color @bg_color;
-@define-color menubar_fg_color @fg_color;
-@define-color notebook_bg_color @bg_color;
-/* begin */
-
 @define-color disabled_bg_color mix(@fg_color, @bg_color, 0.95);
-@define-color disabled_fg_color shade(@bg_color, 0.7);
+/*@define-color disabled_fg_color shade(@bg_color, 0.9);*/
 @define-color disabled_base_color @base_color;
 @define-color disabled_text_color @disabled_fg_color;
 /* Backdrop state colors */
@@ -75,7 +79,7 @@
 /* Shadows */
 @define-color dark_shadow rgb(0, 0, 0);
 @define-color color_shadow @selected_bg_color;
-@define-color light_shadow rgb(255, 255, 255);
+/*@define-color light_shadow rgb(255, 255, 255);*/
 /* Borders */
 @define-color borders #000;
 @define-color outline_color #000;

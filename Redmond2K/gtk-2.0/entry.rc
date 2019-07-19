@@ -14,7 +14,7 @@ style "entry"
 			function = SHADOW
 			detail = "entry"
                         state = NORMAL
-			file = "entry/entry.png"
+			file = "assets/entry.png"
 			border = {2, 2, 2, 2}
 			stretch	= TRUE
 		}
@@ -24,7 +24,7 @@ style "entry"
 			function = SHADOW
 			detail = "entry"
                         state = INSENSITIVE
-			file = "entry/entry_disabled.png"
+			file = "assets/entry_ins.png"
 			border = {2, 2, 2, 2}
 			stretch	= TRUE
 		}
@@ -34,7 +34,7 @@ style "entry"
 			function = SHADOW
 			detail = "entry"
                         state = NORMAL
-			file = "entry/entry.png"
+			file = "assets/entry.png"
 			border = {2, 2, 2, 2}
 			stretch	= TRUE
 		}
@@ -44,7 +44,7 @@ style "entry"
 			function = SHADOW
 			detail = "entry"
                         state = INSENSITIVE
-			file = "entry/entry_disabled.png"
+			file = "assets/entry_ins.png"
 			border = {2, 2, 2, 2}
 			stretch	= TRUE
 		}
@@ -55,8 +55,7 @@ style "entry"
     	{
 			function = FOCUS
 			detail = "entry"
-                        state = ACTIVE
-			file = "entry/entry.png"
+			file = "assets/entry.png"
 			border = {2, 2, 2, 2}
 			stretch	= TRUE
     	}

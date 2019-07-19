@@ -12,7 +12,7 @@ style "radio_button"
 			function = CHECK
 			shadow = OUT
 			state = NORMAL
-			overlay_file = "radio/radio-unchecked.png"
+			overlay_file = "assets/radio.png"
 			overlay_stretch = FALSE
 		}
 
@@ -21,7 +21,7 @@ style "radio_button"
 			function = CHECK
 			shadow = IN
 			state = NORMAL
-			overlay_file = "radio/radio-checked.png"
+			overlay_file = "assets/radio_checked.png"
 			overlay_stretch = FALSE
 		}
 		image 
@@ -29,7 +29,7 @@ style "radio_button"
 			function = CHECK
 			shadow = OUT
 			state = PRELIGHT
-			overlay_file = "radio/radio-unchecked.png"
+			overlay_file = "assets/radio.png"
 			overlay_stretch = FALSE
 		}
 
@@ -38,7 +38,7 @@ style "radio_button"
 			function = CHECK
 			shadow = IN
 			state = PRELIGHT
-			overlay_file = "radio/radio-checked.png"
+			overlay_file = "assets/radio_checked.png"
 			overlay_stretch = FALSE
 		}
 		image 
@@ -46,7 +46,7 @@ style "radio_button"
 			function = CHECK
 			shadow = OUT
 			state = ACTIVE
-			overlay_file = "radio/radio-unchecked.png"
+			overlay_file = "assets/radio.png"
 			overlay_stretch = FALSE
 		}
 
@@ -55,7 +55,7 @@ style "radio_button"
 			function = CHECK
 			shadow = IN
 			state = ACTIVE
-			overlay_file = "radio/radio-checked.png"
+			overlay_file = "assets/radio_checked.png"
 			overlay_stretch = FALSE
 		}
 		image 
@@ -63,7 +63,7 @@ style "radio_button"
 			function = CHECK
 			shadow = OUT
 			state = INSENSITIVE
-			overlay_file = "radio/radio-unchecked-insensitive.png"
+			overlay_file = "assets/radio_ins.png"
 			overlay_stretch = FALSE
 		}
 
@@ -72,7 +72,7 @@ style "radio_button"
 			function = CHECK
 			shadow = IN
 			state = INSENSITIVE
-			overlay_file = "radio/radio-checked-insensitive.png"
+			overlay_file = "assets/radio_ins_checked.png"
 			overlay_stretch = FALSE
 		}
 
@@ -80,7 +80,7 @@ style "radio_button"
 		{
 			function = OPTION
 			shadow = OUT
-			overlay_file = "radio/radio-unchecked.png"
+			overlay_file = "assets/radio.png"
 			overlay_stretch = FALSE
 		}
 
@@ -88,7 +88,7 @@ style "radio_button"
 		{
 			function = OPTION
 			shadow = IN
-			overlay_file = "radio/radio-checked.png"
+			overlay_file = "assets/radio_checked.png"
 			overlay_stretch = FALSE
 		}
 	}

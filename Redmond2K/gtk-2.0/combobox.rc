@@ -1,13 +1,13 @@
 style "color-fix-combo" {
 
 	fg[ACTIVE] =  @fg_color
-  	fg[INSENSITIVE] = shade(0.7,@bg_color)
+  	fg[INSENSITIVE] = @disabled_fg_color
   	fg[NORMAL] =  @fg_color
   	fg[PRELIGHT] = @fg_color
   	fg[SELECTED] = @fg_color
 
 	text[ACTIVE] = @fg_color
-	text[INSENSITIVE] = shade(0.7,@bg_color)
+	text[INSENSITIVE] = @disabled_fg_color
 	text[NORMAL] = @fg_color
 	text[PRELIGHT] = @fg_color
 	text[SELECTED] = @selected_fg_color
@@ -16,28 +16,28 @@ style "color-fix-combo" {
 	    image {
                 state = NORMAL
       		function = ARROW
-      		overlay_file = "combo/arrow.png"
+      		overlay_file = "assets/arrow_down.png"
       		overlay_stretch = FALSE
       		arrow_direction = DOWN
     		   }
 	    image {
                 state = PRELIGHT
       		function = ARROW
-      		overlay_file = "combo/arrow.png"
+      		overlay_file = "assets/arrow_down.png"
       		overlay_stretch = FALSE
       		arrow_direction = DOWN
     		   }
 	    image {
                 state = ACTIVE
       		function = ARROW
-      		overlay_file = "combo/arrow.png"
+      		overlay_file = "assets/arrow_down.png"
       		overlay_stretch = FALSE
       		arrow_direction = DOWN
     		   }
 	    image {
                 state = INSENSITIVE
       		function = ARROW
-      		overlay_file = "combo/arrowdisabled.png"
+      		overlay_file = "assets/arrow_down_ins.png"
       		overlay_stretch = FALSE
       		arrow_direction = DOWN
     		   }
@@ -45,7 +45,7 @@ style "color-fix-combo" {
 		{
 			function = BOX
 			state = NORMAL
-			file = "combo/button.png"
+			file = "assets/button.png"
 			border = {5, 5, 5, 5}
 			stretch = TRUE
 
@@ -55,7 +55,7 @@ style "color-fix-combo" {
 		{
 			function = BOX
 			state = PRELIGHT
-			file = "combo/button.png"
+			file = "assets/button.png"
 			border = {5, 5, 5, 5}
 			stretch = TRUE
 		}
@@ -65,7 +65,7 @@ style "color-fix-combo" {
 		{
 			function = BOX
 			state = INSENSITIVE
-			file = "combo/button.png"
+			file = "assets/button.png"
 			border = {5, 5, 5, 5}
 			stretch = TRUE
 		}
@@ -75,7 +75,7 @@ style "color-fix-combo" {
 		{
 			function = BOX
 			state = ACTIVE
-			file = "combo/button-pressed.png"
+			file = "assets/button_checked.png"
 			border = {5, 5, 5, 5}
 			stretch = TRUE
 		}

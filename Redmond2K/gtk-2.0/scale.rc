@@ -12,7 +12,7 @@ style "scale"
 		{
 			function = BOX
 			detail = "trough"
-			file = "scale/trough-horiz.png"
+			file = "assets/slider_trough_horiz.png"
 			border = {11, 11, 10, 13}
 			stretch	= TRUE
 			orientation	= HORIZONTAL
@@ -22,7 +22,7 @@ style "scale"
 		{
 			function = BOX
 			detail = "trough"
-			file = "scale/trough-vert.png"
+			file = "assets/slider_trough_vert.png"
 			border = {10, 13, 11, 11}
 			stretch = TRUE
 			orientation	= VERTICAL
@@ -32,7 +32,7 @@ style "scale"
 		image
 		{
 			function = SLIDER
-			overlay_file = "scale/slider-horiz.png"
+			overlay_file = "assets/slider_horiz.png"
 			overlay_stretch	= FALSE
 			orientation	= HORIZONTAL
 		}
@@ -40,7 +40,7 @@ style "scale"
 		image
 		{
 			function = SLIDER
-			overlay_file = "scale/slider-vert.png"
+			overlay_file = "assets/slider_vert.png"
 			overlay_stretch	= FALSE
 			orientation	= VERTICAL
 		}
@@ -49,7 +49,7 @@ style "scale"
 		image 
 		{
 			function = FOCUS
-			file = "null.png"
+			file = "assets/null.png"
 		} 
 	}
 }

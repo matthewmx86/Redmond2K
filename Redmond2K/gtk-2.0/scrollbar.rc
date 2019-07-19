@@ -20,7 +20,7 @@ style "scrollbar"
 		{
             function = BOX
             detail = "trough"
-            file = "scrollbar/trough-v.png"
+            file = "assets/scrollbar_trough.png"
             border = {0, 0, 0, 0}
             stretch = FALSE
             orientation = VERTICAL
@@ -30,7 +30,7 @@ style "scrollbar"
 		{
             function = BOX
             detail = "trough"
-            file = "scrollbar/trough-h.png"
+            file = "assets/scrollbar_trough.png"
             border = {0, 0, 0, 0}
             stretch = FALSE
             orientation = HORIZONTAL
@@ -40,7 +40,7 @@ style "scrollbar"
         image 
 		{
 			function = SLIDER
-			file = "scrollbar/scrollbar_horizontal.png"
+			file = "assets/scrollbar.png"
 			border = {3, 3, 3, 3}
 			stretch = TRUE
 			orientation = HORIZONTAL
@@ -49,7 +49,7 @@ style "scrollbar"
         image 
 		{
             function = SLIDER
-            file = "scrollbar/scrollbar_vertical.png"
+            file = "assets/scrollbar.png"
             border = {3, 3, 3, 3}
             stretch = TRUE
             orientation = VERTICAL
@@ -62,7 +62,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = NORMAL
-            overlay_file = "scrollbar/arrow_up.png"
+            overlay_file = "assets/scroll_up_button.png"
             overlay_stretch = FALSE
             arrow_direction = UP
         }
@@ -72,7 +72,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = PRELIGHT
-            overlay_file = "scrollbar/arrow_up.png"
+            overlay_file = "assets/scroll_up_button.png"
             overlay_stretch = FALSE
             arrow_direction = UP
         }
@@ -82,7 +82,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = INSENSITIVE
-            overlay_file = "scrollbar/arrow_up.png"
+            overlay_file = "assets/scroll_up_button.png"
             overlay_stretch = FALSE
             arrow_direction = UP
         }
@@ -92,7 +92,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = ACTIVE
-            overlay_file = "scrollbar/arrow_up_clicked.png"
+            overlay_file = "assets/scroll_up_button_active.png"
             overlay_stretch = FALSE
             arrow_direction = UP
         }
@@ -104,7 +104,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = NORMAL
-            overlay_file = "scrollbar/arrow_down.png"
+            overlay_file = "assets/scroll_down_button.png"
             overlay_stretch = FALSE
             arrow_direction = DOWN
         }
@@ -114,7 +114,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = PRELIGHT
-            overlay_file = "scrollbar/arrow_down.png"
+            overlay_file = "assets/scroll_down_button.png"
             overlay_stretch = FALSE
             arrow_direction = DOWN
         }
@@ -124,7 +124,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = INSENSITIVE
-            overlay_file = "scrollbar/arrow_down.png"
+            overlay_file = "assets/scroll_down_button.png"
             overlay_stretch = FALSE
             arrow_direction = DOWN
         }
@@ -134,7 +134,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = ACTIVE
-            overlay_file = "scrollbar/arrow_down_clicked.png"
+            overlay_file = "assets/scroll_down_button_active.png"
             overlay_stretch = FALSE
             arrow_direction = DOWN
         }
@@ -146,7 +146,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = NORMAL
-            overlay_file = "scrollbar/arrow_left.png"
+            overlay_file = "assets/scroll_left_button.png"
             overlay_stretch = FALSE
             arrow_direction = LEFT
         }
@@ -156,7 +156,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = PRELIGHT
-            overlay_file = "scrollbar/arrow_left.png"
+            overlay_file = "assets/scroll_left_button.png"
             overlay_stretch = FALSE
             arrow_direction = LEFT
         }
@@ -166,7 +166,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = INSENSITIVE
-            overlay_file = "scrollbar/arrow_left.png"
+            overlay_file = "assets/scroll_left_button.png"
             overlay_stretch = FALSE
             arrow_direction = LEFT
         }
@@ -176,7 +176,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = ACTIVE
-            overlay_file = "scrollbar/arrow_left_clicked.png"
+            overlay_file = "assets/scroll_left_button_active.png"
             overlay_stretch = FALSE
             arrow_direction = LEFT
         }
@@ -188,7 +188,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = NORMAL
-            overlay_file = "scrollbar/arrow_right.png"
+            overlay_file = "assets/scroll_right_button.png"
             overlay_stretch = FALSE
             arrow_direction = RIGHT
         }
@@ -198,7 +198,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = PRELIGHT
-            overlay_file = "scrollbar/arrow_right.png"
+            overlay_file = "assets/scroll_right_button.png"
             overlay_stretch = FALSE
             arrow_direction = RIGHT
         }
@@ -208,7 +208,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = INSENSITIVE
-            overlay_file = "scrollbar/arrow_right.png"
+            overlay_file = "assets/scroll_right_button.png"
             overlay_stretch = FALSE
             arrow_direction = RIGHT
         }
@@ -218,7 +218,7 @@ style "scrollbar"
 		{
             function = ARROW
             state = ACTIVE
-            overlay_file = "scrollbar/arrow_right_clicked.png"
+            overlay_file = "assets/scroll_right_button_active.png"
             overlay_stretch = FALSE
             arrow_direction = RIGHT
         }    
