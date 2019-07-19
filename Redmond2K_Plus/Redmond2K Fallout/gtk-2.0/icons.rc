@@ -1,0 +1,14 @@
+########################################################################
+# Xfce4 Desktop Icon Text Color
+########################################################################
+
+style "xfdesktop-icon-view" {
+    XfdesktopIconView::label-alpha = 10
+    base[NORMAL] = "#000000"
+    base[SELECTED] = "#71B9FF"
+    base[ACTIVE] = "#71B9FF"
+    fg[NORMAL] = "#fcfcfc"
+    fg[SELECTED] = "#ffffff"
+    fg[ACTIVE] = "#ffffff"
+}
+widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
