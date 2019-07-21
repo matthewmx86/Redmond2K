@@ -87,3 +87,8 @@ export SAL_USE_VCLPLUGIN="gtk"
 1. Write documentation for the theme builder script
 2. Add more features to the theme generator
 3. Troubleshoot Libre-Office issues
+
+## Screenshots
+![Image Screenshot](https://github.com/matthewmx86/Redmond2K/blob/master/Screenshots/Screenshot.png)
+![Image Screenshot](https://github.com/matthewmx86/Redmond2K/blob/master/Screenshots/Screenshot3.png)
+![Image Screenshot](https://github.com/matthewmx86/Redmond2K/blob/master/Screenshots/Screenshot4.png)
