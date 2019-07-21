@@ -290,12 +290,14 @@ compile_assets $2 2>>/dev/null
 build_theme_config
 
 theme_name="Redmond2K $Theme_name"
+rm -rf ~/.themes/"$theme_name"
 mkdir ~/.themes/"$theme_name"
 mv gtk-2.0 ~/.themes/"$theme_name"/
 mv gtk-3.0 ~/.themes/"$theme_name"/
 mv xfwm4 ~/.themes/"$theme_name"/
 cp theme.conf ~/.themes/"$theme_name"/
-version ~/.themes/"$theme_name"/
+mv version ~/.themes/"$theme_name"/
+cp LICENSE ~/.themes/"$theme_name"/
 echo "GTK2, GTK3 and XFWM4 themes configured and installed."
 echo "Theme '$theme_name' installed in ~/.themes/$theme_name. You may now select and use your theme."
 }
