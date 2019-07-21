@@ -39,6 +39,13 @@ mkdir ~/.themes
 tar -xvzf Redmond2K.tar.gz -C ~/.themes/
 ```
 The GTK2/3 and Xfce4WM themes will now be installed.
+It is also recommended to disable GTK overlay scrollbars (autohiding scrollbars in GTK3). The following command
+will disable the overlay scrollbars for the current user:
+```
+export GTK_OVERLAY_SCROLLING=0
+```
+You may have to log out and back in for the setting to take effect.
+
 
 #### Firefox theme
 You will first need to find your firefox user profile directory. It is usually the one that ends with ".default".
