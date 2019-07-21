@@ -1,11 +1,13 @@
 /* base colors */
-@define-color bg_color #d4d0c8;
-@define-color fg_color #000;
-@define-color base_color #fff;
-@define-color text_color #000;
-@define-color selected_bg_color #0a246a;
-@define-color selected_fg_color #fff;
+@define-color bg_color #D4D0C8;
+@define-color fg_color #000000;
+@define-color base_color #FFFFFF;
+@define-color text_color #000000;
+@define-color selected_bg_color #0A246A;
+@define-color selected_fg_color #FFFFFF;
 @define-color light_shadow #FFFFFF;
+@define-color dark_shadow #94918C;
+@define-color borders #000000;
 @define-color button_bg_color @bg_color;
 @define-color button_fg_color @fg_color;
 @define-color toolbar_bg_color @button_bg_color;
@@ -77,13 +79,12 @@
 @define-color theme_unfocused_disabled_text_color @unfocused_disabled_text_color;
 @define-color theme_unfocused_disabled_base_color @unfocused_disabled_base_color;
 /* Shadows */
-@define-color dark_shadow rgb(0, 0, 0);
 @define-color color_shadow @selected_bg_color;
 /*@define-color light_shadow rgb(255, 255, 255);*/
 /* Borders */
-@define-color borders #000;
-@define-color outline_color #000;
-@define-color unfocused_borders #000;
+/*@define-color borders #000;*/
+@define-color outline_color @borders;
+@define-color unfocused_borders @borders;
 /* Notification header backgrounds */
 @define-color info_fg_color #FFFFFF;
 @define-color info_bg_color #0055FF;

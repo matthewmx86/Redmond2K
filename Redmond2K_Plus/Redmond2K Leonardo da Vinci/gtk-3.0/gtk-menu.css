@@ -11,6 +11,16 @@
     color: @fg_color; }
 
 
+/* Menu fonts respect initial font settings */
+
+
+.context-menu, popover.touch-selection, 
+.csd popover.touch-selection,
+popover.background.touch-selection, 
+.csd popover.background.touch-selection {
+  font: initial; }
+
+
 /* Adjust padding so selected itmes fit inside menu borders */
 
 
