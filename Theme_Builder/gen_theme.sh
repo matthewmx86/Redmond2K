@@ -1,6 +1,7 @@
 #!/bin/bash
 . theme.conf
 code=""
+rgb=""
 
 #Limit RGB channel to 0-255
 function cap_rgb {
@@ -12,23 +13,6 @@ function cap_rgb {
     code=0
   fi
   echo $code
-}
-
-#Filter out invalid hex codes and change 3 digit codes to 6 digit codes
-function verify {
-  verified="$(echo $1 | grep -io [a0-f9] | grep -io [a0-f9] | awk '{ print; count++; if (count==6) exit }' | tr -d "\n")"
-  a=0
-  code=$verified
-  if [ $(echo $code | wc -c ) -lt 5 ]; then
-    verified=""
-    for i in $(echo $code | grep -o .); do
-      a=$(($a+1))
-      i=$i$i
-      verified=$verified$i
-    done
-  fi
-verified=$(echo $verified | grep -o [Aa0-Ff9].*)
-echo "${verified^^}"
 }
 
 #Convert hex to decimal for calculations.
@@ -45,13 +29,48 @@ function hex2rgb {
 function rgb2hex {
 code="$(echo "ibase=10;obase=16; ${1%.*}" | bc)"
 if [ $(echo $code | wc -c ) -lt 3 ]; then
-  code=$code$code
+  code=0$code
 fi
 if [ $(echo $code | grep -c "-") -gt 0 ]; then
-  echo "("$code")"
+  echo "("$code")"echo "ibase=16;obase=A; $i" | bc
 else
   echo $code
 fi
+}
+
+# Overdrive RGB Channels
+function overdrive {
+  hex2rgb "$2"
+  a=0
+  for i in $(echo ${rgb[*]}); do
+    a=$(($a+1))
+    rgb_boost[$a]=$(echo "$(echo "$1" | gawk -F, '{ print $'$a' }' )*255" | bc)
+    rgb[$a]=$(cap_rgb $(echo "${rgb[$a]%.*}+${rgb_boost[$a]%.*}" | bc))
+    output=$output$(rgb2hex ${rgb[$a]})
+  done
+  echo $output
+}
+
+#Filter out invalid hex codes and change 3 digit codes to 6 digit codes
+function verify {
+  verified="$(echo $1 | grep -io [a0-f9] | grep -io [a0-f9] | awk '{ print; count++; if (count==6) exit }' | tr -d "\n")"
+  a=0
+  code=$verified
+  if [ $(echo $code | wc -c ) -lt 5 ]; then
+    verified=""
+    for i in $(echo $code | grep -o .); do
+      a=$(($a+1))
+      i=$i$i
+      verified=$verified$i
+    done
+  fi
+  verified=$(echo $verified | grep -o [Aa0-Ff9].*)
+  verified="${verified^^}"
+  if [ $(echo "$enable_overdrive" | grep -ci "true") -gt 0 ]; then
+    overdrive "$window_R,$window_G,$window_B"  "$verified"
+  else
+    echo $verified
+  fi
 }
 
 #Calculate shadow and highlight colors then convert decimal back to hex
@@ -283,9 +302,9 @@ function build {
 echo "Cleaning any previous orphaned files..."
 #Clean incomplete or interupted builds, compile images
 cleanup  2>>/dev/null
-echo "extracting base files please wait..."
-tar -xvzf base.tar.gz 2>>/dev/null
-echo "Compiling theme images please wait..."
+echo "Extracting base files..."
+tar -xzf base.tar.gz 2>>/dev/null
+echo "Compiling theme images..."
 compile_assets $2 2>>/dev/null
 build_theme_config
 
@@ -309,6 +328,7 @@ rm rm base.rc gtk.css gtk-base.css gtkrc themerc version
 }
 
 #Verify config file hex codes
+echo "Verifying and calculating colors. Please wait..."
 fgcolor=$(verify $fgcolor)
 fgcolor_rgb[1]=${rgb[1]%.*}
 fgcolor_rgb[2]=${rgb[2]%.*}
