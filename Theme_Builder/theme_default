@@ -1,17 +1,18 @@
 #######################################################
 # Basic theme settings and colors.      	      #
-# Valid color codes are three or six digit hex codes. #
+# Valid color codes are three or six digit hex codes  #
+# and RGB color codes (R,G,B) 0-255,0-255,0-255       #
 #######################################################
 Theme_name="Testing"
 
 #Window Text Color:
-fgcolor="#000"
+fgcolor="0,0,0"
 
 #Window background color:
 bgcolor="#d4d0c8"
 
 #Textview background color (such as editors or framed objects):
-basecolor="#fff"
+basecolor="255,255,255"
 
 #Textview text color:
 basefg="#000"
@@ -41,6 +42,20 @@ border="#000"
 # Advanced settings           #
 ###############################
 
+
+#################################################################
+# Color saturation					        #
+# Sets saturation to all selected colors. Setting to            #
+# "0" removes all colors and creates a grey scale color scheme. #
+# 1 is normal saturation and greater than 1 adds color          #
+# saturation. Note: setting level to 1 disables saturation      #
+# calculations and speeds up calculation time. Valid settings   #
+# are 0 - 2, in intervals of 0.1.                               #
+#################################################################
+
+saturation_level="1"
+
+
 ########################################################################
 # RGB channel overdrive.					       #
 # Adds an amount of red, green, or blue to every selected color above. #
@@ -51,15 +66,17 @@ border="#000"
 # intervals of 0.1. Note: The script only clips and does not compress  #
 # RGB color channels so setting all values to 1 will make everything   #
 # white and setting all values to -1 will make everything black        #
+# An example: window_R="0" window_B="-1" window_G="-1" will set a      #
+# red monochrome color scheme to the generated theme.                  #
 ########################################################################
 
 #Enable channel overdrive. 
-enable_overdrive="true"
+enable_overdrive="false"
 
 #Color channel gain
 window_R="0.1"
 window_G="-0.1"
-window_B="-0.1"
+window_B="-0.2"
 
 #########################################################################
 # 3D shadow and disabled fg color brightness levels.			#

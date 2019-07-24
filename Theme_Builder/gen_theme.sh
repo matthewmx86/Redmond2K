@@ -2,6 +2,7 @@
 . theme.conf
 code=""
 rgb=""
+invalid_entry=0
 
 #Limit RGB channel to 0-255
 function cap_rgb {
@@ -79,8 +80,13 @@ function saturation {
   echo $output
 }
 
-#Filter out invalid hex codes and change 3 digit codes to 6 digit codes
 function verify {
+  if [ $(echo $1 | grep -ci ",") -lt 1 ] && [ $(echo $1 | grep -ci "#") -lt 1 ]; then
+    echo "INVALID"
+    exit
+  fi
+  if [ $(echo $1 | grep -ci "#") -gt 0 ]; then
+    #Filter out invalid hex codes and change 3 digit codes to 6 digit codes
   verified="$(echo $1 | grep -io [a0-f9] | grep -io [a0-f9] | awk '{ print; count++; if (count==6) exit }' | tr -d "\n")"
   a=0
   code=$verified
@@ -96,6 +102,19 @@ function verify {
   #Apply case filter to output. The bc command is case sensative for hex values.
   verified=$(echo $verified | grep -o [Aa0-Ff9].*)
   verified="${verified^^}"
+else
+  if [ $(echo $1 | grep -ci ",") -gt 0 ]; then
+    rgb[1]=$(echo $1 | gawk -F, '{ print $1 }')
+    rgb[2]=$(echo $1 | gawk -F, '{ print $2 }')
+    rgb[3]=$(echo $1 | gawk -F, '{ print $3 }')
+    a=0
+    for i in $(echo ${rgb[*]}); do
+      a=$(($a+1))
+      verified=$verified$(rgb2hex ${rgb[$a]})
+    done
+      verified="${verified^^}"
+    fi
+fi
 
   #Convert saturation level to integer
   sat=$(echo "$saturation_level * 10" | bc)
@@ -303,6 +322,11 @@ mv themerc xfwm4/
 }
 
 function prompt {
+if [ "$invalid_entry" = "1" ]; then
+  echo "Warning: invalid color code entered or config file is corrupt. Exiting..."
+  exit 1
+fi
+echo $invalid_entry
 echo "Theme name: $Theme_name"
 echo "Selected colors:"
 hex2rgb $bgcolor
@@ -375,9 +399,6 @@ rm rm base.rc gtk.css gtk-base.css gtkrc themerc version
 #Verify config file hex codes
 echo "Verifying and calculating colors. Please wait..."
 fgcolor=$(verify $fgcolor)
-fgcolor_rgb[1]=${rgb[1]%.*}
-fgcolor_rgb[2]=${rgb[2]%.*}
-fgcolor_rgb[3]=${rgb[3]%.*}
 bgcolor=$(verify $bgcolor)
 basecolor=$(verify $basecolor)
 basefg=$(verify $basefg)
