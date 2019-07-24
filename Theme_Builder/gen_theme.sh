@@ -5,14 +5,14 @@ rgb=""
 
 #Limit RGB channel to 0-255
 function cap_rgb {
-  code=$1
-  if [ $code -gt 255 ]; then
-    code=255
+  cap=${1%.*}
+  if [ $cap -gt 255 ]; then
+    cap=255
   fi
-  if [ $code -lt 1 ]; then
-    code=0
+  if [ $cap -lt 1 ]; then
+    cap=0
   fi
-  echo $code
+  echo $cap
 }
 
 #Convert hex to decimal for calculations.
@@ -27,7 +27,8 @@ function hex2rgb {
 
 #Convert rgb dec to hex
 function rgb2hex {
-code="$(echo "ibase=10;obase=16; ${1%.*}" | bc)"
+code=$(cap_rgb $1)
+code="$(echo "ibase=10;obase=16; $code" | bc)"
 if [ $(echo $code | wc -c ) -lt 3 ]; then
   code=0$code
 fi
@@ -45,8 +46,35 @@ function overdrive {
   for i in $(echo ${rgb[*]}); do
     a=$(($a+1))
     rgb_boost[$a]=$(echo "$(echo "$1" | gawk -F, '{ print $'$a' }' )*255" | bc)
-    rgb[$a]=$(cap_rgb $(echo "${rgb[$a]%.*}+${rgb_boost[$a]%.*}" | bc))
+    rgb[$a]=$(echo "${rgb[$a]%.*}+${rgb_boost[$a]%.*}" | bc)
     output=$output$(rgb2hex ${rgb[$a]})
+  done
+  echo $output
+}
+
+#Desaturize colors
+function saturation {
+  hex2rgb "$2"
+  diviser="$1"
+  #Calc average rgb brightness
+  a=0
+  for i in $(echo ${rgb[*]}); do
+    a=$(($a+1))
+    avgN=$(($avgN+${rgb[$a]}))
+  done
+  avgN=$(echo "$avgN / $a" | bc)
+  if [ $sat -gt 10 ]; then
+    avgN=0
+  else
+    avgN=$(echo "$avgN * $(echo "1 - $diviser" | bc)" | bc)
+  fi
+
+  #Populate RGB values with average value
+  a=0
+  for i in $(echo ${rgb[*]}); do
+    a=$(($a+1))
+    color=$(echo "$avgN + $(echo "${rgb[$a]} * $diviser" | bc)" | bc)
+    output=$output$(rgb2hex $color)
   done
   echo $output
 }
@@ -64,12 +92,29 @@ function verify {
       verified=$verified$i
     done
   fi
+
+  #Apply case filter to output. The bc command is case sensative for hex values.
   verified=$(echo $verified | grep -o [Aa0-Ff9].*)
   verified="${verified^^}"
-  if [ $(echo "$enable_overdrive" | grep -ci "true") -gt 0 ]; then
-    overdrive "$window_R,$window_G,$window_B"  "$verified"
+
+  #Convert saturation level to integer
+  sat=$(echo "$saturation_level * 10" | bc)
+  sat=${sat%.*}
+
+  #Determine color algorithm to use
+  if [ $(echo "$enable_overdrive" | grep -ci "true") -lt 1 ] && [ $sat = 10 ]; then
+            echo $verified
   else
-    echo $verified
+    if [ $(echo "$enable_overdrive" | grep -ci "true") -gt 0 ] && [ $sat != 10 ]; then
+      saturation "$saturation_level" $(overdrive "$window_R,$window_G,$window_B" "$verified")
+    else
+      if [ $sat != 10 ]; then
+        saturation "$saturation_level" "$verified"
+      fi
+      if [ $enable_overdrive = "true" ]; then
+        overdrive "$window_R,$window_G,$window_B" "$verified"
+      fi
+    fi
   fi
 }
 
