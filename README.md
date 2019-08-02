@@ -74,9 +74,9 @@ Following my example above you would run the command:
 mkdir ~/.mozilla/firefox/vugvl4ul.default-release/chrome
 ```
 Now that the chrome directory has been created, you can install the classic IE5 theme by extracting the 
-ie5_classic.tar.gz archive into your chrome folder. Again, using my example above the command would be:
+ie5_classic_firefox.tar.gz archive into your chrome folder. Again, using my example above the command would be:
 ```
-tar -xvzf ie5_classic.tar.gz -C ~/.mozilla/firefox/vugvl4ul.default-release/chrome/
+tar -xvzf ie5_classic_firefox.tar.gz -C ~/.mozilla/firefox/vugvl4ul.default-release/chrome/
 ```
 The Firefox theme should now be installed and will be activated once you close all Firefox sessions and restart Firefox.
 ## Known issues
