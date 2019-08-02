@@ -80,16 +80,8 @@ tar -xvzf ie5_classic_firefox.tar.gz -C ~/.mozilla/firefox/vugvl4ul.default-rele
 ```
 The Firefox theme should now be installed and will be activated once you close all Firefox sessions and restart Firefox.
 ## Known issues
-As of right now GTK3 Libre-Office does not display correctly. Some widgets are off and the scrollbar buttons don't display.
-A work around I've been using for now is using the GTK2 plugin for Libre-Office. The following will run Libre-Office with 
-the GTK2 engine instead of GTK3:
-```
-SAL_USE_VCLPLUGIN="gtk" libreoffice
-```
-To make the setting permanent for the current user you can run the following command:
-```
-export SAL_USE_VCLPLUGIN="gtk"
-```
+As of right now GTK3 Libre-Office does not display 100% correctly. Some widgets are off in the preferences window and the scrollbar buttons don't display. There has however, been many additions to the theme for LibreOffice compatibility. For the most part LibreOffice should be usable with the GTK3 plugin and I no longer recommend using the GTK2 workaround for this theme.
+
 ## TODO
 1. Write documentation for the theme builder script
 2. Add more features to the theme generator
