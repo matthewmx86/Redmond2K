@@ -1,0 +1,10 @@
+Redmond2K theme generator v1.3
+
+To use the script:
+-Edit theme.conf to set the desired colors and other settings. 
+-The theme_default file contains the default theme settings for reference.
+-Six and three digit hex codes or RGB color codes can be used.
+-Run ./gen_theme.sh to compile and install the theme.
+
+Files are installed in ~/.themes/
+A copy of the theme.conf file is also copied to the theme folder of the compiled theme.
