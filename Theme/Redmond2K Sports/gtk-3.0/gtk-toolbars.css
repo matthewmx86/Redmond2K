@@ -99,7 +99,7 @@ toolbar:disabled {
 
 
 actionbar {
-border-top: 1px solid @borders;
+border-top: 1px solid transparent;
 padding: 2px;
 
 }

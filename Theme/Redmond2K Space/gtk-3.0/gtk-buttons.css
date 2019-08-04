@@ -102,7 +102,7 @@ combobox button {
    box-shadow: none;
    outline-color: transparent;
    outline-offset: -1px;
-   background-color: @base_color;
+   background-color: transparent;
    border: solid;
    padding: 0px;
    border-width: 2px 18px 2px 2px;
@@ -115,7 +115,7 @@ combobox button:checked, combobox button:active {
    outline-color: transparent;
    outline-offset: -1px;
    outline-width: 1px;
-   background-color: @base_color;
+   background-color: transparent;
    border: solid;
    padding: 0px;
    border-width: 2px 18px 2px 2px;
@@ -123,7 +123,7 @@ combobox button:checked, combobox button:active {
    border-image-slice: 2 18 2 2; }
 
 combobox button:disabled {
-   background-color: @bg_color; }
+   background-color: transparent; }
 
 
 /* Circular buttons */
@@ -164,21 +164,18 @@ calendar.button {
 
 notebook button.flat {
    border-color: transparent;
-   border-radius: 2px;
    color: @theme_fg_color;
    box-shadow: none;
    background-color: transparent; }
 
 notebook button.flat:hover {
    border-color: transparent;
-   border-radius: 2px;
    color: @theme_fg_color;
    box-shadow: none;
    background-color: transparent; }
 
 notebook button.flat:active {
    border-color: transparent;
-   border-radius: 2px;
    color: @theme_fg_color;
    box-shadow: none;
    background-color: transparent; }
@@ -196,7 +193,12 @@ notebook tab:checked button:hover, notebook tab:checked button:focus,
 notebook tab:checked button:active, notebook tab:checked button:checked, 
 notebook tab:checked button:active:hover, notebook tab:checked button:checked:hover, 
 notebook tab:checked button:backdrop {
+   min-height: 0;
+   min-width: 0;
+   padding: 0;
+   margin: 0;
    border-color: transparent;
+   border: none;
    background-color: transparent;
    color: @theme_fg_color; }
 

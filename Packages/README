@@ -1,1 +1,9 @@
-These are tar archives of the Redmond2K github repository
+Tar archives of the Redmond2K Github repository.
+
+md5 verification of archives:
+Redmond2K.md5: Redmond2K.tar.gz md5 checksum
+theme_builder.md5: theme_builder.tar.gz md5 checksum
+ie5_classic_firefox.md5: ie5_classic_firefox.tar.gz md5 checksum
+
+To check the checksum, download the archive and run md5sum "archive.tar.gz". The checksum should match
+the checksum shown in the md5 file.
