@@ -66,9 +66,9 @@ scrolledwindow.frame {
    window widget directly, use references through parent widgets otherwise Libre-Office will also
    put a border around the menu bar */
 
-
 paned > scrolledwindow, box > scrolledwindow, overlay > scrolledwindow, notebook > * > scrolledwindow,
-paned > * > notebook > stack > * > scrolledwindow, viewport > grid > scrolledwindow {
+paned > * > notebook > stack > * > scrolledwindow, viewport > grid > scrolledwindow, paned > * > scrolledwindow {
+   padding: 1px;
    border-color: @borders;
    border: 1px solid @dark_shadow;
    border-bottom: 1px solid @light_shadow;
