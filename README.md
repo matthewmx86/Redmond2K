@@ -46,6 +46,26 @@ export GTK_OVERLAY_SCROLLING=0
 ```
 You may have to log out and back in for the setting to take effect.
 
+### Xfce4 Panel Configuration
+The main theme includes a GTK2 hack for the system tray and orage clock applet to make them appear to be
+inside the same inset frame (only applies to GTK2 version of the Xfce4 panel). In order for the frames to display
+correctly, you must add the two applets in order: "Notification Area" and then "Orage Clock". Your panel layout should look
+like the image below:
+
+![Image Screenshot](https://github.com/matthewmx86/Redmond2K/blob/master/Screenshots/applet.png)
+
+Once you have added the applets you will notice that the frames between the two applets don't line up correctly.
+To fix this you will need to deselect the option "Show Frame" for the notification area applet.
+Right click on the notification tray applet and select "Properties":
+
+![Image Screenshot](https://github.com/matthewmx86/Redmond2K/blob/master/Screenshots/properties.png)
+
+Uncheck the option "Show Frame" on the dialog window:
+
+![Image Screenshot](https://github.com/matthewmx86/Redmond2K/blob/master/Screenshots/dialog.png)
+
+The frame borders should now look aligned between the notification area and the Orage Clock applets.
+(Note that there will be a small gap between the two applets this is currently a bug in the theme.)
 
 #### Firefox theme
 You will first need to find your firefox user profile directory. It is usually the one that ends with ".default".
