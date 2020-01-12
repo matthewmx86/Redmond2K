@@ -1,5 +1,5 @@
 # Redmond2K
-## I am currently looking for someone who would be intereste in taking over this project.
+## I am currently looking for someone who would be interested in taking over this project.
 A Win2K inspired theme for GTK3 and GTK2 developed for XFCE4
 ![Image Screenshot](https://github.com/matthewmx86/Redmond2K/blob/master/Screenshots/Screenshot2.png)
 ## About
